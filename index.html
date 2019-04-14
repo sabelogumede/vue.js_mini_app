@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Vue template</title>
+
+  <link rel="stylesheet" href="css/style1.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h2>{{ productName }} are in stock.</h2>
+        <ul>
+            <li v-for="product in products">
+                {{product}}
+            </li>
+        </ul>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                productName: 'Yellow',
+                products: [
+                    'Boots',
+                    'Jacket',
+                    'Hiking socks'
+                    ]
+            }
+        })
+    </script>
+
+    <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>
